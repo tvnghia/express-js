@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Pizza - Free Bootstrap 4 Template by Colorlib</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<link rel="stylesheet" href="css/aos.css">
+
+	<link rel="stylesheet" href="css/ionicons.min.css">
+
+	<link rel="stylesheet" href="css/flaticon.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<section class="home-slider owl-carousel img" style="background-image: url(images/bg_1.jpg);">
+
+		<div class="slider-item" style="background-image: url(images/bg_3.jpg);">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row slider-text justify-content-center align-items-center">
+
+					<div class="col-md-7 col-sm-12 text-center ftco-animate">
+						<h1 class="mb-3 mt-5 bread">Bai thi Cuoi ky PTUDW</h1>
+						<p class="breadcrumbs"><span>HK1 / 2023-2024</span></p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section ftco-animate text-center">
+					<h2 class="mb-4">Our Menu</h2>
+					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+						live the blind texts.</p>
+				</div>
+			</div>
+		</div>
+
+    <div id="fh5co-featured" class="container-fluid">
+			<div class="row">
+				<div class="fh5co-grid">
+          {{#each foods }}
+					<div class="fh5co-v-half">
+
+              {{#if isRight}}
+              <div class="fh5co-h-row-2 fh5co-reversed to-animate-2 bounceIn animated">
+                <div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url({{imagePath}})">
+                </div>
+                <div class="fh5co-v-col-2 fh5co-text arrow-right">
+                  <h2 class="text-dark">{{name}}</h2>
+                  <span class="pricing">${{price}}</span>
+                  <p>{{summary}}</p>
+                </div>
+              </div>
+              {{else}}
+              <div class="fh5co-h-row-2 to-animate-2 bounceIn animated">
+                <div class="fh5co-v-col-2 fh5co-bg-img" style="background-image: url({{imagePath}})">
+                </div>
+                <div class="fh5co-v-col-2 fh5co-text arrow-left">
+                  <h2 class="text-dark">{{name}}</h2>
+                  <span class="pricing">${{price}}</span>
+                  <p>{{summary}}</p>
+                </div>
+              </div>
+              {{/if}}
+            
+					</div>
+          {{/each}}
+
+				</div>
+			</div>
+		</div>
+		<div class="row mt-5">
+			<div class="col text-center">
+				<div class="block-27">
+          {{{createPagination pagination leftText="&lt;" rightText="&gt;"}}}
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+
+	<section class="ftco-section contact-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section ftco-animate text-center">
+					<h2 class="mb-4">Reserve a Table</h2>
+					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+						live the blind texts.</p>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 to-animate-2 fadeInUp animated">
+					<div class="row">
+						<div class="col-md-12 mb-4">
+							<h2 class="h4">Contact Information</h2>
+						</div>
+						<div class="col-md-12 mb-3">
+							<p><span>Fullname:</span> Nguyen Van A</p>
+						</div>
+						<div class="col-md-12 mb-3">
+							<p><span>Phone:</span> <a>+ 1234 567 890</a></p>
+						</div>
+						<div class="col-md-12 mb-3">
+							<p><span>Email:</span> <a>youremail@mail.com</a></p>
+						</div>
+						<div class="col-md-12 mb-3">
+							<p><span>Website:</span> <a href="http://ptudw-mssv.onrender.com" target="_blank">Link to
+									your EShop Project Website</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 to-animate-2 fadeInUp animated">
+          <form action="/" method="post">
+            <h2 class="h4">Reservation Form</h2>
+            <div class="form-group ">
+              <label for="name" class="sr-only">Name</label>
+              <input required id="name" name="name" class="form-control" placeholder="Name" type="text">
+            </div>
+            <div class="form-group ">
+              <label for="email" class="sr-only">Email</label>
+              <input id="email" required name="email" class="form-control" placeholder="Email" type="email">
+            </div>
+            <div class="form-group ">
+              <label for="message" class="sr-only">Message</label>
+              <textarea required name="message" id="message" cols="30" rows="5" class="form-control"
+                placeholder="Message"></textarea>
+            </div>
+            <div class="form-group ">
+              <input class="btn btn-primary" value="Send Message" type="submit">
+            </div>
+            
+            
+          </form>
+          <p class="text-warning">tao dau {{message}}</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="ftco-footer ftco-section img">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+
+					<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						Copyright ©
+						<script>document.write(new Date().getFullYear());</script>2023 All rights reserved | This
+						template is made with <i class="icon-heart" aria-hidden="true"></i> by <a
+							href="https://colorlib.com" target="_blank">Colorlib</a>
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script src="js/jquery.timepicker.min.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/scrollax.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
